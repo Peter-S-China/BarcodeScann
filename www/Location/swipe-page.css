@@ -1,0 +1,58 @@
+/* Set the background image sources */
+
+#newyork2 { background-image: url(./mws2.png); }
+#newyork3 { background-image: url(./mws3.png); }
+#newyork4 { background-image: url(./mws4.png); }
+#newyork5 { background-image: url(./mws5.png); }
+#newyork6 { background-image: url(newyork.jpg); }
+
+
+#buenosaires2 { background-image: url(./ly2.png); }
+#buenosaires3 { background-image: url(./ly3.png); }
+#buenosaires4 { background-image: url(./ly4.png); }
+#buenosaires5 { background-image: url(./ly5.png); }
+#buenosaires6 { background-image: url(newyork.jpg; }
+
+#capetown { background-image: url(hht1.png);}
+#capetown2 { background-image: url(hht2.png); }
+#capetown3 { background-image: url(hht3.png); }
+#capetown4 { background-image: url(hht4.png); }
+#capetown5 { background-image: url(hht5.png); }
+#capetown6 { background-image: url(capetown.jpg); }
+
+#paris { background-image: url(./paris.jpg); }
+#seoul { background-image: url(./seoul.jpg); }
+#sydney { background-image: url(./sydney.jpg); }
+
+/* Background settings */
+.demo-page {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+/* Transparent footer */
+.demo-page .ui-footer {
+	background: none;
+	border: none;
+	bottom: 0;
+}
+/* The footer won't have a height because there are only two absolute positioned elements in it.
+So we position the buttons from the bottom. */
+.control.ui-btn-left, .trivia-btn.ui-btn-right {
+	top: auto;
+	bottom: 7px;
+	margin: 0;
+}
+/* Custom styling for the trivia source */
+small {
+	font-size: .75em;
+	color: #666;
+}
+/* Prevent text selection while swiping with mouse */
+.demo-page .ui-header, .ui-title, .control .ui-btn, .trivia-btn {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}

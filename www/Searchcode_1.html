@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>HomePage</title>
+    </head>
+    
+
+    <body  onLoad="MyAutoRun();" style="background-image:url('./img/background-metro.png');background-repeat:no-repeat;
+        background-position:top left;
+        background-origin:padding-box">
+        
+
+                
+        <div style="background-image:url('./img/background_put.png'); height:140px;width:270px; margin-top:46px;margin-left:25px;">
+           
+            <div style="color:#296187;margin-left:80px;padding-top:5px;line-height:16px;font-size:18px;font-family:Helvetica,​Arial,​sans-serif;">请输入追溯码</div>
+
+            <script language="javascript">
+                
+                　function MyAutoRun()
+                　　{
+                    　　　//以下是您的函数的代码，请自行修改先！
+                    //　　　alert("函数自动执行哦！");
+                    
+                    code1.focus();
+                    
+                    document.getElementById("loading").style.display="none";
+                    
+                 }
+                
+                
+                
+                
+                function checkform(){
+                 
+                    
+                    var barcodes = document.getElementById("code1").value + document.getElementById("code2").value + document.getElementById("code3").value + document.getElementById("code4").value;
+                    
+                    //alert(barcodes);
+                    if(barcodes == "")
+                    {
+                    
+                        alert("不能为空请重新输入");
+                        //navigator.app.exitApp();
+                        
+                    }
+               
+                    else if(barcodes == "1458763287654398"){
+                    
+            alert(barcodes);
+                        
+            document.getElementById("loading").style.display="block";
+                        
+            document.getElementById("myform").action = "http://www.hbtlh.com/pt/1458763287654398.aspx";
+                        
+            document.getElementById("myform").submit();
+
+                        
+                    
+                    
+                    }else if(barcodes == "2569862096381648"){
+                        
+                        alert(barcodes);
+                        
+                        document.getElementById("loading").style.display="block";
+                        
+                        document.getElementById("myform").action = "http://www.hbtlh.com/pt/2569862096381648.aspx";
+                        
+                        document.getElementById("myform").submit();
+                        
+                        
+                        
+                        
+                    }else if(barcodes == "3876388754973202"){
+                        
+                        alert(barcodes);
+                        
+                        document.getElementById("loading").style.display="block";
+                        
+                        document.getElementById("myform").action = "http://www.hbtlh.com/pt/3876388754973202.aspx";
+                        
+                        document.getElementById("myform").submit();
+                        
+                        
+                        
+                        
+                    }else if(barcodes == "4538997346093532"){
+                        
+                        alert(barcodes);
+                        
+                        document.getElementById("loading").style.display="block";
+                        
+                        document.getElementById("myform").action = "http://www.hbtlh.com/pt/4538997346093532.aspx";
+                        
+                        document.getElementById("myform").submit();
+                        
+                        
+                        
+                        
+                    }else if(barcodes == "5349081593463456"){
+                        
+                        alert(barcodes);
+                        
+                        document.getElementById("loading").style.display="block";
+                        
+                        document.getElementById("myform").action = "http://www.hbtlh.com/pt/5349081593463456.aspx";
+                        
+                        document.getElementById("myform").submit();
+                        
+                        
+                        
+                        
+                    }
+                     
+                    else{
+                      
+                        
+                        
+                        //alert(barcodes);
+                        
+                        var circle = new Sonic({
+                                               
+                                               width: 50,
+                                               height: 50,
+                                               padding: 80,
+                                               
+                                               strokeColor: '#0099FF',
+                                               
+                                               pointDistance: .01,
+                                               stepsPerFrame: 3,
+                                               trailLength: .7,
+                                               
+                                               step: 'fader',
+                                               
+                                               setup: function() {
+                                               this._.lineWidth = 5;
+                                               },
+                                               
+                                               path: [
+                                                      ['arc', 25, 25, 25, 0, 360]
+                                                      ]
+                                               
+                                               });
+                        
+                        circle.play();
+                        
+                        document.body.appendChild(circle.canvas);
+                        
+                        document.getElementById("myform").action = "http://pt.hbtlh.com/lp.aspx?tc="+ barcodes + "";
+                        document.getElementById("loading").style.display="block";
+                        
+                        //document.getElementById("myform").action = "http://www.baidu.com";
+                        
+                        document.getElementById("myform").submit();
+           
+                    
+                    }
+                
+                
+                
+                }
+                
+            </script>
+                	
+ 
+            <form id="myform" method="post" onSubmit="return checkform()">
+                   
+<input  maxlength="4" style="font-size:14px;margin-left:14px;margin-top:12px;background:white;border:1px solid #ddd;height:28px;width:40px;" type="tel"  name="TrackCodes1" id="code1" onkeydown="if(this.value.length==4) document.getElementById('code2').focus()();">
+                    
+<input maxlength="4" style="font-size:14px;margin-left:2px;margin-top:12px;background:white;border:1px solid #ddd;height:28px;width:40px;" type="tel" name="TrackCodes2" id="code2" onkeydown="if(this.value.length==4) document.getElementById('code3').focus()();">
+                    
+<input maxlength="4" style="font-size:14px;margin-left:2px;margin-top:12px;background:white;border:1px solid #ddd;height:28px;width:40px;" type="tel" name="TrackCodes3"  id="code3" onkeydown="if(this.value.length==4) document.getElementById('code4').focus()();">
+
+ <input maxlength="4" style="font-size:14px;margin-left:2px;margin-top:12px;background:white;border:1px solid #ddd;height:28px;width:40px;" type="tel" name="TrackCodes4" id="code4" onkeydown="if(this.value.length==4) document.getElementById('code1').focus()();">
+                    
+        
+                    <input type="submit" id="sub" class="submit" name="sub" value="确定">  		
+        
+                        <style type="text/css" charset="utf-8">
+                            
+                            .submit {
+                                width:240px;
+                                height:38px;
+                                margin-left:17px;
+                                margin-top:8px;
+                                border:1px solid #AED8FF;
+                                background: url("./img/ok_t.png");
+                                font-size:16px;
+                                color:#ffffff;
+                            }
+                            .waiting {
+                                width:240px;
+                                height:38px;
+                                margin-left:17px;
+                                margin-top:18px;
+                                text-align:center;
+                                font-size:16px;
+                                color:#ffffff;
+                                                            }
+
+                            </style>
+                        
+            </form> 
+        </div>
+        
+        	
+
+        <script src="js/sonic.js"></script>
+        
+        <div  class="waiting" id="loading">
+            
+            程序加载中，请稍等.....
+            
+                
+        </div>
+
+
+
+</head>
+
+<body >   
+
+
+</html>

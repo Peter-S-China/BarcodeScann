@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Map_View</title>
+    </head>
+    <body style="background-image:url('./img/background-metro.png');background-repeat:repeat;
+        background-position:left;
+        background-origin:content-box;">
+        
+        
+        
+        <style type="text/css">
+            body, html,#allmap {width: 100%;height: 100%;overflow: hidden;hidden;margin:0;}
+            </style>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=93E807771b3f19c97b97b7db5480b8ab"></script>
+        
+        
+        <div STYLE="background-image:url('./img/background_top.png');height:44px;">
+            <div STYLE="float:left;padding:5px; margin-left:5px;margin-top:3px;background-image:url('./img/back_t.png');">
+                <a href="./index.html" STYLE="float:left;padding:4px; margin-left:5px;"	>返回</a></div>
+            
+            <h2 style="float:left;color:#296187;margin-left:80px;line-height:16px;font-family:Helvetica,​Arial,​sans-serif;">原产地</h2>
+        </div>
+        
+        
+        
+        
+        <div id="allmap"></div>
+       
+        
+        <script type="text/javascript">
+            
+            
+           
+
+            // 百度API
+            
+
+            var map = new BMap.Map("allmap");
+            map.centerAndZoom(new BMap.Point(111.378288888889,30.4943888888889), 14);
+            map.setCurrentCity('宜昌市');
+         /*
+            var myIcon = new BMap.Icon("./img/juwawa.gif",new BMap.Size(350,350));
+            var marker6 = new BMap.Marker(new BMap.Point(111.378288888889,30.4943888888889),{icon:myIcon});
+            map.addOverlay(marker6);
+            
+            
+            
+            var opts6 = {
+                width : 100,     // 信息窗口宽度
+                height: 20,     // 信息窗口高度
+                title : "Hi，我是橘娃娃！" , // 信息窗口标题
+                enableMessage:false,//设置允许信息窗发送短息
+            }
+            
+            var infoWindow6 = new BMap.InfoWindow("生态要绿色，把健康还给身体！" ,opts6);  // 创建信息窗口对象
+            
+            map.openInfoWindow(infoWindow6,new BMap.Point(111.379666666667,30.5030555555556)); //开启信息窗口
+          */
+
+
+            
+            var marker1 = new BMap.Marker(new BMap.Point(111.361666666667,30.5040555555556));  //创建标注          
+            map.addOverlay(marker1);             // 将标注添加到地图中 
+            var infoWindow1 = new BMap.InfoWindow("马王山基地");
+            
+            marker1.addEventListener("click", function(){
+                                     //this.openInfoWindow(infoWindow1);
+                                     setTimeout("window.location='"+'./Location/newyork.html'+"'",500);
+
+                               
+
+                              	    
+            
+                                     });
+                                     
+             //添加本标注对象 开始                         
+             var label1 = new BMap.Label("马王山基地",{offset:new BMap.Size(20,-10)});
+												label1.setStyle({
+									     color : "red",
+		 									 fontSize : "12px",
+										   height : "20px",
+										   lineHeight : "20px",
+											 fontFamily:"微软雅黑"
+											 });
+					  marker1.setLabel(label1);					
+					  //添加本标注对象 结束	
+  
+
+     
+                                     
+            
+            
+            
+            var marker2= new BMap.Marker(new BMap.Point(111.373611111111,30.4947222222222));
+            map.addOverlay(marker2);
+            var infoWindow2 = new BMap.InfoWindow("燎原基地");
+                        
+            marker2.addEventListener("click", function(){
+                                     
+                                     //this.openInfoWindow(infoWindow2);
+                                     setTimeout("window.location='"+'./Location/buenosaires.html'+"'",500);
+
+                                     
+                                     
+                                     });
+                                     
+             //添加本标注对象 开始                         
+             var label2 = new BMap.Label("燎原基地",{offset:new BMap.Size(20,-10)});
+												label2.setStyle({
+									     color : "red",
+		 									 fontSize : "12px",
+										   height : "20px",
+										   lineHeight : "20px",
+											 fontFamily:"微软雅黑"
+											 });
+					  marker2.setLabel(label2);					
+					  //添加本标注对象 结束	
+            
+            
+            
+            
+            var marker3 = new BMap.Marker(new BMap.Point(111.365,30.4883333333333));
+            map.addOverlay(marker3);
+            
+            var infoWindow3 = new BMap.InfoWindow("南桥基地");
+            marker3.addEventListener("click", function(){
+                                    //this.openInfoWindow(infoWindow3);
+                                     
+                                     setTimeout("window.location='"+'./Location/paris.html'+"'",500);
+
+                                     
+                                     });
+             //添加本标注对象 开始                         
+             var label3 = new BMap.Label("南桥基地",{offset:new BMap.Size(20,-10)});
+												label3.setStyle({
+									     color : "red",
+		 									 fontSize : "12px",
+										   height : "20px",
+										   lineHeight : "20px",
+											 fontFamily:"微软雅黑"
+											 });
+					  marker3.setLabel(label3);					
+					  //添加本标注对象 结束	                                    
+            
+            
+            
+            
+            var marker4 = new BMap.Marker(new BMap.Point(111.396388888889,30.5063888888889));
+            map.addOverlay(marker4);
+            
+            var infoWindow4 = new BMap.InfoWindow("红花套基地");
+
+            marker4.addEventListener("click", function(){
+                                     //this.openInfoWindow(infoWindow4);
+                                     
+                                     setTimeout("window.location='"+'./Location/capetown.html'+"'",500);
+
+                                     
+                                     
+                                     });
+             //添加本标注对象 开始                         
+             var label4 = new BMap.Label("红花套基地",{offset:new BMap.Size(20,-10)});
+												label4.setStyle({
+									     color : "red",
+		 									 fontSize : "12px",
+										   height : "20px",
+										   lineHeight : "20px",
+											 fontFamily:"微软雅黑"
+											 });
+					  marker4.setLabel(label4);					
+					  //添加本标注对象 结束	                                    
+                                                 
+            
+            
+            
+            var marker5 = new BMap.Marker(new BMap.Point(111.367222222222,30.4797222222222));
+            map.addOverlay(marker5);
+            
+            var infoWindow5 = new BMap.InfoWindow("八卦山基地");
+
+            marker5.addEventListener("click", function(){
+                                     
+                                     //this.openInfoWindow(infoWindow5);
+                                     
+                                     
+                                     setTimeout("window.location='"+'./Location/seoul.html'+"'",500);
+
+                                     
+                                     });
+             //添加本标注对象 开始                         
+             var label5 = new BMap.Label("八卦山基地",{offset:new BMap.Size(20,-10)});
+												label5.setStyle({
+									     color : "red",
+		 									 fontSize : "12px",
+										   height : "20px",
+										   lineHeight : "20px",
+											 fontFamily:"微软雅黑"
+											 });
+					  marker5.setLabel(label5);					
+					  //添加本标注对象 结束	                                    
+                                                                           
+            
+            
+         
+            
+            
+            /*
+             var marker7 = new BMap.Marker(new BMap.Point(111.350,30.552)); 
+             map.addOverlay(marker7);                          
+             var infoWindow7 = new BMap.InfoWindow("informaiion");
+             marker7.addEventListener("click", function(){this.openInfoWindow(infoWindow7);});
+             */
+            
+                       </script>
+        
+        
+        <script type="text/javascript" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+            </script>
+        
+    </body>
+</html>
